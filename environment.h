@@ -9,6 +9,7 @@ class environment {
     std::map<std::string, std::string> env;
     public:
     environment();
-}
+    void insert(const std::string& symbol, const std::string& value);
+};
 
 #endif
