@@ -10,6 +10,7 @@ class environment {
     public:
     environment();
     void insert(const std::string& symbol, const std::string& value);
+    std::string lookup(const std::string& symbol);
 };
 
 #endif
