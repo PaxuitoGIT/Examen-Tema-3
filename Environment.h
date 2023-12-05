@@ -27,6 +27,8 @@ class Environment {
     Environment();
     void insert(const std::string& symbol, const std::string& value);
     Variant lookup(const std::string& symbol);
+    void remove(const std::string& symbol);
+    bool exists(const std::string& symbol);
 };
 
 #endif
