@@ -18,3 +18,10 @@ float Variant::getFloat() const {
     }
     throw std::runtime_error("No es un flotante");
 }
+
+std::string Variant::getString() const {
+    if (std::holds_alternative<std::string>(value)) {
+        return std::get<std::string>(value);
+    }
+    throw std::runtime_error("No es una cadena");
+}
