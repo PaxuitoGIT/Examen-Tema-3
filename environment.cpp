@@ -3,6 +3,9 @@
 environment::environment() {}
 
 void environment::insert(const std::string& symbol, const std::string& value) {
+    if (env.find(symbol) == env.end()) {
+        throw SymbolAlreadyExists();
+    }
     env[symbol] = value;
 }
 
