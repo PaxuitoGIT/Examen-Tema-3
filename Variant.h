@@ -7,7 +7,7 @@ using namespace std;
 
 class Variant {
     private:
-    variant<int, float, string> value;
+    Variant<int, float, string> value;
     public:
     Variant(int v);
     Variant(float v);
