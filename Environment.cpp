@@ -15,3 +15,11 @@ Variant Environment::lookup(const std::string& symbol) {
     }
     return env[symbol];
 }
+
+void Environment::remove(const std::string& symbol) {
+    env.erase(symbol);
+}
+
+bool Environment::exists(const std::string& symbol) {
+    return env.find(symbol) != env.end();
+}
