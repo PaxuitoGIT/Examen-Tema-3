@@ -3,6 +3,14 @@
 
 #include <map>
 #include <string>
+#include <exception>
+
+class SymbolNotFound : public std::exception {
+    public:
+    virtual const char* what() const throw() {
+        return "Simbolo no encontrado";
+    }
+};
 
 class environment {
     private:
