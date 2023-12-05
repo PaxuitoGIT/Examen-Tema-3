@@ -25,7 +25,7 @@ class Environment {
     std::map<std::string, std::string> env;
     public:
     Environment();
-    void insert(const std::string& symbol, const std::string& value);
+    void insert(const std::string& symbol, const Variant& value);
     Variant lookup(const std::string& symbol);
     void remove(const std::string& symbol);
     bool exists(const std::string& symbol);
