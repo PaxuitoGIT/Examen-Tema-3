@@ -11,3 +11,10 @@ int Variant::getInt() const {
     }
     throw std::runtime_error("No es un entero");
 }
+
+float Variant::getFloat() const {
+    if (std::holds_alternative<float>(value)) {
+        return std::get<float>(value);
+    }
+    throw std::runtime_error("No es un flotante");
+}
