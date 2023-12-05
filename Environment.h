@@ -20,11 +20,11 @@ class SymbolAlreadyExists : public std::exception {
     }
 };
 
-class environment {
+class Environment {
     private:
     std::map<std::string, std::string> env;
     public:
-    environment();
+    Environment();
     void insert(const std::string& symbol, const std::string& value);
     Variant lookup(const std::string& symbol);
 };
