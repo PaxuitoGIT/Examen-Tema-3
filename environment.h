@@ -12,6 +12,13 @@ class SymbolNotFound : public std::exception {
     }
 };
 
+class SymbolAlreadyExists : public std::exception {
+    public:
+    virtual const char* what() const throw() {
+        return "Simbolo ya existe";
+    }
+};
+
 class environment {
     private:
     std::map<std::string, std::string> env;
